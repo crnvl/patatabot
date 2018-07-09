@@ -3,15 +3,14 @@ package core;
  
 
 
-import commands.*;
+
 import config.settings;
-import listeners.commandlistener;
+
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
 import net.dv8tion.jda.core.entities.Game;
-import worker.CommandHandler;
 
 import javax.security.auth.login.LoginException;
 
