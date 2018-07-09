@@ -28,7 +28,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.IDLE);
-        builder.setGame(Game.playing("pre-alpha"));
+        builder.setGame(Game.playing("mit Prinzi Gassi gehen"));
 
         //Listeners
         
