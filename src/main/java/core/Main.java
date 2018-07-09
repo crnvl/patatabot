@@ -27,7 +27,7 @@ public class Main {
         builder.setAutoReconnect(true);
 
         //Status
-        builder.setStatus(OnlineStatus.IDLE);
+        builder.setStatus(OnlineStatus.ONLINE);
         builder.setGame(Game.playing("mit Prinzi Gassi gehen"));
 
         //Listeners
