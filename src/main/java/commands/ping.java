@@ -20,8 +20,8 @@ public class ping implements runinterface {
                             .setDescription("Mein Ping zur API beträgt momentan " + event.getJDA().getPing() + " ms!").build()).queue();
         }else if(args.length >= 2) {
 
-            int plus = Integer.parseInt(args[1]);
-            int ping = Integer.parseInt(String.valueOf(event.getJDA().getPing())) + plus;
+            long plus = Integer.parseInt(args[1]);
+            long ping = Integer.parseInt(String.valueOf(event.getJDA().getPing())) + plus;
 
             event.getTextChannel().sendMessage(
                     new EmbedBuilder().setColor(Color.PINK)
