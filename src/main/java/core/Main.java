@@ -26,7 +26,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.playing("mit Prinzi Gassi gehen"));
+        builder.setGame(Game.playing("mit Prinzi Gassi gehen | pt!"));
 
         //Listeners
         builder.addEventListener(new commandlistener());
