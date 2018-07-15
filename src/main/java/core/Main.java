@@ -8,6 +8,7 @@ import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
 import net.dv8tion.jda.core.entities.Game;
+import okhttp3.Cookie;
 import worker.CommandHandler;
 
 import javax.security.auth.login.LoginException;
@@ -48,6 +49,7 @@ public class Main {
     public static void addCommands() {
 
         CommandHandler.commands.put("ping", new ping());
+        CommandHandler.commands.put("membercount", new membercount());
 
     }
 }
