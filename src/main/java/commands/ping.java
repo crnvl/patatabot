@@ -13,10 +13,20 @@ public class ping implements runinterface {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-        event.getTextChannel().sendMessage(
-                new EmbedBuilder().setColor(Color.PINK)
-                        .setTitle("Patata Ping")
-                        .setDescription("Mein Ping zur API beträgt momentan " + event.getJDA().getPing() + " ms!").build()).queue();
+        if(args.length == 0) {
+            event.getTextChannel().sendMessage(
+                    new EmbedBuilder().setColor(Color.PINK)
+                            .setTitle("Patata Ping")
+                            .setDescription("Mein Ping zur API beträgt momentan " + event.getJDA().getPing() + " ms!").build()).queue();
+        }else if(args.length >= 2) {
+
+            String PING = event.getJDA().getPing() + args[1];
+
+            event.getTextChannel().sendMessage(
+                    new EmbedBuilder().setColor(Color.PINK)
+                            .setTitle("Patata Ping")
+                            .setDescription("Mein Ping zur API beträgt momentan " + PING + " ms!").build()).queue();
+        }
     }
 
     @Override
