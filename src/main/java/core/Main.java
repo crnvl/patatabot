@@ -1,16 +1,14 @@
 package core;
 
- 
-
-
-
+import commands.*;
 import config.settings;
-
+import listeners.commandlistener;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
 import net.dv8tion.jda.core.entities.Game;
+import worker.CommandHandler;
 
 import javax.security.auth.login.LoginException;
 
@@ -31,7 +29,7 @@ public class Main {
         builder.setGame(Game.playing("mit Prinzi Gassi gehen"));
 
         //Listeners
-        
+        builder.addEventListener(new commandlistener());
         addCommands();
 
 
@@ -39,8 +37,6 @@ public class Main {
             JDA jda = builder.buildBlocking();
         } catch (LoginException e) {
             e.printStackTrace();
-            builder.setStatus(OnlineStatus.IDLE);
-            builder.setGame(Game.playing("low processing mode!"));
         } catch (InterruptedException e) {
             e.printStackTrace();
             builder.setStatus(OnlineStatus.IDLE);
@@ -51,7 +47,7 @@ public class Main {
 
     public static void addCommands() {
 
-        
+        CommandHandler.commands.put("ping", new ping());
 
     }
 }
