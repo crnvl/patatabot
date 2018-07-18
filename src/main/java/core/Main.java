@@ -50,6 +50,7 @@ public class Main {
 
         CommandHandler.commands.put("ping", new ping());
         CommandHandler.commands.put("membercount", new membercount());
+         CommandHandler.commands.put("rainbowrole", new rainbowrole());
 
     }
 }
