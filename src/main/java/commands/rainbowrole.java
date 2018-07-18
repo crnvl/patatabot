@@ -30,27 +30,22 @@ public class rainbowrole implements runinterface {
                             case 1:
                                 event.getMessage().getTextChannel().getGuild().getRoleById("469249976929878026").getManager().setColor(new Color(75,0,130)).queue();
                                 secondsPassed++;
-                                secondsPassed = 0;
                                 break;
                             case 2:
                                 event.getMessage().getTextChannel().getGuild().getRoleById("469249976929878026").getManager().setColor(new Color(0,0,255)).queue();
                                 secondsPassed++;
-                                secondsPassed = 0;
                                 break;
                             case 3:
                                 event.getMessage().getTextChannel().getGuild().getRoleById("469249976929878026").getManager().setColor(new Color(0,255,0)).queue();
                                 secondsPassed++;
-                                secondsPassed = 0;
                                 break;
                             case 4:
                                 event.getMessage().getTextChannel().getGuild().getRoleById("469249976929878026").getManager().setColor(new Color(255,255,0)).queue();
                                 secondsPassed++;
-                                secondsPassed = 0;
                                 break;
                             case 5:
                                 event.getMessage().getTextChannel().getGuild().getRoleById("469249976929878026").getManager().setColor(new Color(255,127,0)).queue();
                                 secondsPassed++;
-                                secondsPassed = 0;
                                 break;
                             case 6:
                                 event.getMessage().getTextChannel().getGuild().getRoleById("469249976929878026").getManager().setColor(new Color(255,0,0)).queue();
