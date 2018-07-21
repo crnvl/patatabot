@@ -31,6 +31,7 @@ public class Main {
 
         //Listeners
         builder.addEventListener(new commandlistener());
+        builder.addEventListener(new huilistener());
         addCommands();
 
 
@@ -54,8 +55,6 @@ public class Main {
         CommandHandler.commands.put("rainbowrole", new rainbowrole());
 
         CommandHandler.commands.put("voicestate", new voicestate());
-        
-        CommandHandler.commands.put("spam", new spam());
 
     }
 }
