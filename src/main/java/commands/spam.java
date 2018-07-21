@@ -24,31 +24,31 @@ public class spam implements runinterface {
                 public void run() {
                     switch (secondsPassed) {
                         case 0:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             break;
                         case 1:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             break;
                         case 2:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             break;
                         case 3:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             break;
                         case 4:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             break;
                         case 5:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             break;
                         case 6:
-                            event.getMessage().getTextChannel().sendMessage(":hui:").queue();
+                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
                             secondsPassed++;
                             secondsPassed = 0;
                             break;
