@@ -15,6 +15,7 @@ public class spam implements runinterface {
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
         if(event.getMessage().getTextChannel().getId().contains("467801238252159006")) {
+            String em = event.getJDA().getGuildById("407159177333702656").getEmotesByName("hui",  true).get(0).getName();
             event.getMessage().getTextChannel().sendMessage(":hui:").queue();
             Timer myTimer1 = new Timer();
             TimerTask task = new TimerTask() {
@@ -24,31 +25,7 @@ public class spam implements runinterface {
                 public void run() {
                     switch (secondsPassed) {
                         case 0:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
-                            secondsPassed++;
-                            break;
-                        case 1:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
-                            secondsPassed++;
-                            break;
-                        case 2:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
-                            secondsPassed++;
-                            break;
-                        case 3:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
-                            secondsPassed++;
-                            break;
-                        case 4:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
-                            secondsPassed++;
-                            break;
-                        case 5:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
-                            secondsPassed++;
-                            break;
-                        case 6:
-                            event.getMessage().getTextChannel().sendMessage("<:hui:433969151422234635>").queue();
+                            event.getMessage().getTextChannel().sendMessage(em).queue();
                             secondsPassed++;
                             secondsPassed = 0;
                             break;
