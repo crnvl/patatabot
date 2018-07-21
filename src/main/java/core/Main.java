@@ -27,7 +27,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.playing("mit Prinzi Gassi gehen | pt!"));
+        builder.setGame(Game.playing("in #panties"));
 
         //Listeners
         builder.addEventListener(new commandlistener());
@@ -50,8 +50,12 @@ public class Main {
 
         CommandHandler.commands.put("ping", new ping());
         CommandHandler.commands.put("membercount", new membercount());
-         CommandHandler.commands.put("rainbowrole", new rainbowrole());
- CommandHandler.commands.put("voicestate", new voicestate());
+
+        CommandHandler.commands.put("rainbowrole", new rainbowrole());
+
+        CommandHandler.commands.put("voicestate", new voicestate());
+        
+        CommandHandler.commands.put("spam", new spam());
 
     }
 }
