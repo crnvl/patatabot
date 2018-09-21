@@ -28,7 +28,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.playing("in #panties"));
+        builder.setGame(Game.playing("Prinzis Server beobachten und Zwommeln essen"));
 
         //Listeners
         builder.addEventListener(new commandlistener());
