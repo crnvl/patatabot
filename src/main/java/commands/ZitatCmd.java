@@ -5,7 +5,7 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 import java.awt.*;
 
-public class zitatcmd implements runinterface{
+public class ZitatCmd implements runinterface{
 
 
     @Override
