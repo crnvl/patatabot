@@ -55,6 +55,7 @@ public class Main {
         CommandHandler.commands.put("rainbowrole", new rainbowrole());
 
         CommandHandler.commands.put("voicestate", new voicestate());
+         CommandHandler.commands.put("zitat", new ZitatCmd());
 
     }
 }
