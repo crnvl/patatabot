@@ -28,7 +28,8 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.playing("Prinzis Server beobachten und Zwommeln essen"));
+        builder.setGame(Game.playing("ohne Nilsbiep Macht zu geben!
+"));
 
         //Listeners
         builder.addEventListener(new commandlistener());
