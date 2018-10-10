@@ -28,7 +28,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.playing("ohne Nilsbiep Macht zu geben!"));
+        builder.setGame(Game.playing("Paladins: Champions of the Realm"));
 
 
         //Listeners
