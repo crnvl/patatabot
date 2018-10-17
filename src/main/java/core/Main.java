@@ -28,7 +28,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.playing("Paladins: Champions of the Realm"));
+        builder.setGame(Game.playing("Minecraft auf: free4.freemc.host:31325"));
 
 
         //Listeners
