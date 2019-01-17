@@ -22,7 +22,6 @@ public class TextListener extends ListenerAdapter {
             CleverbotAPI api = new CleverbotBuilder()
                     .setUserKey(cleverUser)
                     .setApiKey(cleverApi)
-                    .setNickname("ptbbot")
                     .build();
             //some question
             String question = event.getMessage().getContentDisplay();
