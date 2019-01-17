@@ -1,13 +1,11 @@
-package listeners;
+package Listener;
+
 
 import ml.duncte123.CleverBot4J.CleverbotAPI;
 import ml.duncte123.CleverBot4J.CleverbotBuilder;
-import ml.duncte123.CleverBot4J.WebUtils;
+
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-
-
-import java.io.IOException;
 
 
 public class TextListener extends ListenerAdapter {
@@ -15,15 +13,16 @@ public class TextListener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        if (event.getMessage().getTextChannel().getName().contains("talk-with-an-artificial-intelligence-cuz-thats-cool-you-know ") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
-
+        if (event.getMessage().getTextChannel().getName().contains("ai-test") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
+            String cleverUser = System.getenv("CBU");
+            String cleverApi = System.getenv("CBA");
+            
             event.getTextChannel().sendTyping().complete();
             CleverbotAPI api = new CleverbotBuilder()
-                    .setUserKey(System.getenv(CBU))
-                    .setApiKey(System.getenv(CBA))
+                    .setUserKey(cleverUser)
+                    .setApiKey(cleverApi)
                     .setNickname("ptbbot")
                     .build();
-
             //some question
             String question = event.getMessage().getContentDisplay();
             //Ask the question
@@ -32,7 +31,7 @@ public class TextListener extends ListenerAdapter {
             //Show the answer
             System.out.println(api.getNickname() + ": " + answer);
             event.getTextChannel().sendMessage(answer).complete();
-            
+
         }
     }
 }
