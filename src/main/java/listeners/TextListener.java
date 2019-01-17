@@ -1,6 +1,7 @@
 package listeners;
 
 
+
 import ml.duncte123.CleverBot4J.CleverbotAPI;
 import ml.duncte123.CleverBot4J.CleverbotBuilder;
 
@@ -16,7 +17,7 @@ public class TextListener extends ListenerAdapter {
         if (event.getMessage().getTextChannel().getName().contains("ai-test") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
             String cleverUser = System.getenv("CBU");
             String cleverApi = System.getenv("CBA");
-            
+
             event.getTextChannel().sendTyping().complete();
             CleverbotAPI api = new CleverbotBuilder()
                     .setUserKey(cleverUser)
@@ -35,3 +36,4 @@ public class TextListener extends ListenerAdapter {
         }
     }
 }
+
