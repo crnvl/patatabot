@@ -29,7 +29,7 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.streaming("künstliche intelligenz", "https://www.twitch.tv/shinixsensei"));
+        builder.setGame(Game.playing("künstliche intelligenz"));
 
 
         //Listeners
