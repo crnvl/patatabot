@@ -50,7 +50,7 @@
               <dependency>
             <groupId>com.github.duncte123</groupId>
             <artifactId>CleverBot4J</artifactId>
-            <version>LATEST</version>
+            <version>master-22f5e404d2-1</version>
         </dependency>
 </dependencies>
 
