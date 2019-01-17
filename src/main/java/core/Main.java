@@ -2,6 +2,7 @@ package core;
 
 import commands.*;
 import config.settings;
+import listeners.TextListener;
 import listeners.huilistener;
 import listeners.commandlistener;
 import net.dv8tion.jda.core.AccountType;
@@ -33,6 +34,7 @@ public class Main {
 
         //Listeners
         builder.addEventListener(new commandlistener());
+        builder.addEventListener(new TextListener());
         addCommands();
 
 
