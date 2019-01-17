@@ -30,7 +30,7 @@
         <dependency>
             <groupId>net.dv8tion</groupId>
             <artifactId>JDA</artifactId>
-            <version>3.6.0_362</version>
+            <version>LATEST</version>
         </dependency>
         <dependency>
             <groupId>com.sedmelluq</groupId>
@@ -50,7 +50,7 @@
               <dependency>
             <groupId>com.github.duncte123</groupId>
             <artifactId>CleverBot4J</artifactId>
-            <version>master-22f5e404d2-1</version>
+            <version>LATEST</version>
         </dependency>
 </dependencies>
 
