@@ -34,7 +34,7 @@ public class Main {
 
         //Listeners
         builder.addEventListener(new commandlistener());
-        builder.addEventListener(new TextListener());
+        builder.addEventListener(new TextListener());   
         addCommands();
 
 
