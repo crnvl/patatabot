@@ -21,12 +21,12 @@ public class TextListener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        if (event.getMessage().getTextChannel().getName().contains("") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
+        if (event.getMessage().getTextChannel().getName().contains("talk-with-an-artificial-intelligence-cuz-thats-cool-you-know ") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
 
             event.getTextChannel().sendTyping().complete();
             CleverbotAPI api = new CleverbotBuilder()
-                    .setUserKey("")
-                    .setApiKey("")
+                    .setUserKey(System.getenv(CBU))
+                    .setApiKey(System.getenv(CBA))
                     .setNickname("ptbbot")
                     .build();
 
