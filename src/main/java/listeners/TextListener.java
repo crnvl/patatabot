@@ -1,17 +1,11 @@
 package listeners;
 
-import Core.Main;
 import ml.duncte123.CleverBot4J.CleverbotAPI;
 import ml.duncte123.CleverBot4J.CleverbotBuilder;
 import ml.duncte123.CleverBot4J.WebUtils;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-import org.json.JSONException;
-import org.json.JSONObject;
+
 
 import java.io.IOException;
 
