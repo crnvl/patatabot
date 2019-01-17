@@ -14,7 +14,7 @@ public class TextListener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        if (event.getMessage().getTextChannel().getName().contains("ai-test") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
+        if (event.getMessage().getTextChannel().getId().contains("535483045990367234") && !event.getAuthor().getId().contains(event.getJDA().getSelfUser().getId())) {
             String cleverUser = System.getenv("CBU");
             String cleverApi = System.getenv("CBA");
 
