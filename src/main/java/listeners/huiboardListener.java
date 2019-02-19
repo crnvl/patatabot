@@ -12,7 +12,7 @@ public class huiboardListener extends ListenerAdapter {
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         try {
-            if (event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getReactions().size() == 1 && event.getReactionEmote().getId().contains("433969151422234635")) {
+            if (event.getReactionEmote().getId().contains("433969151422234635") && event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getReactions().size() > 1) {
                 if (event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getEmbeds().size() == 0) {
                     event.getJDA().getTextChannelById("547417181068197898").sendMessage(
                             new EmbedBuilder()
