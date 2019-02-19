@@ -11,32 +11,35 @@ public class huiboardListener extends ListenerAdapter {
 
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
-        if (event.getReaction().getCount() > 4 && event.getReactionEmote().getId().contains("433969151422234635")) {
-            if(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getEmbeds().size() == 0) {
-                event.getJDA().getTextChannelById("547417181068197898").sendMessage(
-                        new EmbedBuilder()
-                                .setColor(Color.PINK)
-                                .setTitle("Jump to Message", "https://discordapp.com/channels/" + event.getGuild().getId() + "/" + event.getChannel().getId() + "/" + event.getMessageId())
-                                .setDescription(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getContentDisplay())
-                                .setAuthor(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getName() + "#" + event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDiscriminator(), event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDefaultAvatarUrl())
+        try {
+            if (event.getReaction().getCount() >= 1 && event.getReactionEmote().getId().contains("433969151422234635")) {
+                if (event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getEmbeds().size() == 0) {
+                    event.getJDA().getTextChannelById("547417181068197898").sendMessage(
+                            new EmbedBuilder()
+                                    .setColor(Color.PINK)
+                                    .setTitle("Jump to Message", "https://discordapp.com/channels/" + event.getGuild().getId() + "/" + event.getChannel().getId() + "/" + event.getMessageId())
+                                    .setDescription(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getContentDisplay())
+                                    .setAuthor(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getName() + "#" + event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDiscriminator(), event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDefaultAvatarUrl())
 
 
+                                    .build()).queue();
+                } else {
+                    event.getJDA().getTextChannelById("547417181068197898").sendMessage(
 
-                                .build()).queue();
-            }else {
-                event.getJDA().getTextChannelById("547417181068197898").sendMessage(
-
-                        new EmbedBuilder()
-                                .setColor(Color.PINK)
-                                .setTitle("Jump to Message", "https://discordapp.com/channels/" + event.getGuild().getId() + "/" + event.getChannel().getId() + "/" + event.getMessageId())
-                                .setImage(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getEmbeds().get(0).getImage().getUrl())
-                                .setDescription(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getContentDisplay())
-                                .setAuthor(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getName() + "#" + event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDiscriminator(), event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDefaultAvatarUrl())
+                            new EmbedBuilder()
+                                    .setColor(Color.PINK)
+                                    .setTitle("Jump to Message", "https://discordapp.com/channels/" + event.getGuild().getId() + "/" + event.getChannel().getId() + "/" + event.getMessageId())
+                                    .setImage(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getEmbeds().get(0).getImage().getUrl())
+                                    .setDescription(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getContentDisplay())
+                                    .setAuthor(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getName() + "#" + event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDiscriminator(), event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDefaultAvatarUrl())
 
 
-                                .build()).queue();
+                                    .build()).queue();
+                }
+
             }
-
+        }catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
