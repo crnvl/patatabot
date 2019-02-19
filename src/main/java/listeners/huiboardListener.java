@@ -12,7 +12,7 @@ public class huiboardListener extends ListenerAdapter {
     @Override
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         try {
-            if (event.getReaction().getCount() >= 1 && event.getReactionEmote().getId().contains("433969151422234635")) {
+            if (event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getReactions().size() == 1 && event.getReactionEmote().getId().contains("433969151422234635")) {
                 if (event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getEmbeds().size() == 0) {
                     event.getJDA().getTextChannelById("547417181068197898").sendMessage(
                             new EmbedBuilder()
@@ -22,7 +22,7 @@ public class huiboardListener extends ListenerAdapter {
                                     .setAuthor(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getName() + "#" + event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDiscriminator(), event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDefaultAvatarUrl())
 
 
-                                    .build()).queue();
+                                    .build()).complete();
                 } else {
                     event.getJDA().getTextChannelById("547417181068197898").sendMessage(
 
@@ -34,7 +34,7 @@ public class huiboardListener extends ListenerAdapter {
                                     .setAuthor(event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getName() + "#" + event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDiscriminator(), event.getReaction().getChannel().getHistory().getMessageById(event.getMessageId()).getAuthor().getDefaultAvatarUrl())
 
 
-                                    .build()).queue();
+                                    .build()).complete();
                 }
 
             }
