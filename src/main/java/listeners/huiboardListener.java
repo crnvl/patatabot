@@ -39,6 +39,8 @@ public class huiboardListener extends ListenerAdapter {
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
+            }else {
+                System.out.println("no:reaction");
             }
     }
 }
