@@ -29,11 +29,11 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-          builder.setGame(Game.streaming("künstliche intelligenz", "https://www.twitch.tv/shinixsensei"));
-
+        builder.setGame(Game.watching("#huiboard"));
 
         //Listeners
         builder.addEventListener(new commandlistener());
+        builder.addEventListener(new huiboardListener());
         builder.addEventListener(new TextListener());   
         addCommands();
 
