@@ -4,6 +4,7 @@ import commands.*;
 import config.settings;
 import listeners.TextListener;
 import listeners.huilistener;
+import listeners.huiboardListener;
 import listeners.commandlistener;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
