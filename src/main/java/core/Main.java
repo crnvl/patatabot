@@ -1,18 +1,12 @@
 package core;
 
-import commands.*;
 import config.settings;
-import listeners.TextListener;
-import listeners.huilistener;
 import listeners.huiboardListener;
-import listeners.commandlistener;
-import net.dv8tion.jda.core.AccountType;
-import net.dv8tion.jda.core.JDA;
-import net.dv8tion.jda.core.JDABuilder;
-import net.dv8tion.jda.core.OnlineStatus;
-import net.dv8tion.jda.core.entities.Game;
-import okhttp3.Cookie;
-import worker.CommandHandler;
+import net.dv8tion.jda.api.AccountType;
+import net.dv8tion.jda.api.JDA;
+import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.OnlineStatus;
+import net.dv8tion.jda.api.entities.Activity;
 
 import javax.security.auth.login.LoginException;
 
@@ -30,32 +24,23 @@ public class Main {
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
-        builder.setGame(Game.watching("#huiboard"));
+        builder.setActivity(Activity.watching("#huiboard"));
 
         //Listeners
-        builder.addEventListener(new commandlistener());
-        builder.addEventListener(new huiboardListener());
-        builder.addEventListener(new TextListener());   
+        builder.addEventListeners(new huiboardListener());
         addCommands();
 
 
         try {
-            JDA jda = builder.buildBlocking();
+            JDA jda = builder.build();
         } catch (LoginException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            builder.setStatus(OnlineStatus.IDLE);
-            builder.setGame(Game.playing("low processing mode!"));
         }
 
     }
 
     public static void addCommands() {
 
-        CommandHandler.commands.put("ping", new ping());
-        CommandHandler.commands.put("membercount", new membercount());
-         CommandHandler.commands.put("zitat", new ZitatCmd());
-
+        //no commands added
     }
 }
