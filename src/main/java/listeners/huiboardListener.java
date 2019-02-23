@@ -12,5 +12,4 @@ import java.util.concurrent.TimeUnit;
 
 public class huiboardListener extends ListenerAdapter {
 
-    }
 }
