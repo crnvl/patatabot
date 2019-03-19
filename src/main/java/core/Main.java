@@ -1,7 +1,8 @@
     package core;
 
 import config.settings;
-    import listeners.reactionRoleListener;
+import listeners.enigmaSEN;
+import listeners.reactionRoleListener;
     import net.dv8tion.jda.core.AccountType;
     import net.dv8tion.jda.core.JDA;
     import net.dv8tion.jda.core.JDABuilder;
@@ -24,10 +25,11 @@ import config.settings;
 
             //Status
             builder.setStatus(OnlineStatus.ONLINE);
-            builder.setGame(Game.watching("#huiboard"));
+            builder.setGame(Game.watching("❍❒ ⬧♋⧫◆❒■"));
 
             //Listeners
             builder.addEventListener(new reactionRoleListener());
+            builder.addEventListener(new enigmaSEN());
             addCommands();
 
 
