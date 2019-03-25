@@ -25,7 +25,7 @@ import listeners.reactionRoleListener;
 
             //Status
             builder.setStatus(OnlineStatus.ONLINE);
-            builder.setGame(Game.watching("❍❒ ⬧♋⧫◆❒■"));
+            builder.setGame(Game.watching("boing"));
 
             //Listeners
             builder.addEventListener(new reactionRoleListener());
